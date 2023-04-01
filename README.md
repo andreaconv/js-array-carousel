@@ -33,9 +33,8 @@ Al click delle frecce, oltre al cambio di immagine attiva, gestire il cambio di 
 --- 
 
 **Prima di partire a scrivere codice:**
-```
+
 Non lasciamoci spaventare dalla complessità apparente dell’esercizio, ma analizziamo prima, come abbiamo fatto sempre, cosa ci potrebbe aspettare. Abbiamo completato ormai da qualche giorno la sessione HTML e CSS, se non ci ricordiamo qualcosa andiamo pure a riguardare alcuni argomenti. Non dedichiamo però al ripasso più di una **mezz’ora**, così da non perdere di vista il focus dell’esercizio.
-```
 
 >**Consigli del giorno:**
 
@@ -47,4 +46,7 @@ Non lasciamoci spaventare dalla complessità apparente dell’esercizio, ma anal
 
 ## SPEPS
 
-1.
+1. Creo il markup statico inserend nell'HTML il container e al suo interno un’immagine grande al centro;
+2. Rimuoviamo tutto il markup statico e inserisco tutte le immagini dinamicamente servendomi dell’array fornito e un semplice ciclo for che concatena un template literal.
+(Tutte le immagini saranno nascoste, tranne la prima, che avrà una classe specifica che la renderà visibile. Al termine di questa fase ci ritroveremo con lo stesso slider stilato nella milestone 1, ma costruito dinamicamente attraverso JavaScript.)
+3. Al click dell’utente sulle frecce, il programma cambierà l’immagine attiva, che quindi verrà visualizzata al posto della precedente.
