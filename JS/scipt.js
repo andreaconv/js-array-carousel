@@ -5,6 +5,10 @@ const slider = document.querySelector(".image");
 const btnUp = document.getElementById("up");
 const btnDown = document.getElementById("down");
 
+//CONTATORE
+let contatore = 0;
+
+
 
 // un array è un elenco, ogni elemento di questo elenco ha un indice con base 0 perciò: 
 // l'img 01 avrà indice 0, 
@@ -31,22 +35,27 @@ for (let i = 0; i < images.length; i++) {
 }
 
 //PRENDO TUTTE LE IMMAGINI DALL'HTML APPENA CREATE E INSERITE
-const immagini = document.getElementsByClassName("hide");
 //getElementsByClassName mi restituisce HTMLCollection che è un array con tutti gli elementi aventi la classe specificata
+const immagini = document.getElementsByClassName("hide");
 
 //prendo il primo elemento di questo array e gli tolgo la classe "hide"
-immagini[0].classList.remove("hide");
+immagini[contatore].classList.remove("hide");
+
 
 
 
 //azione bottoni
+btnDown.addEventListener("click", function () {
+  console.log("hai cliccato il tasto DOWN ");
+  immagini[contatore].classList.add("hide");
+  contatore++;
+  console.log(contatore)
+  // immagini[contatore].classList.remove("hide");
+
+})
+
+
 btnUp.addEventListener("click", function () {
   console.log("hai cliccato il tasto UP")
-
-
 })
 
-
-btnDown.addEventListener("click", function () {
-  console.log("hai cliccato il tasto DOWN ")
-})
