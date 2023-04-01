@@ -35,13 +35,15 @@ const immagini = document.getElementsByClassName("hide");
 //getElementsByClassName mi restituisce HTMLCollection che è un array con tutti gli elementi aventi la classe specificata
 
 //prendo il primo elemento di questo array e gli tolgo la classe "hide"
-immagini[0].classList.remove("hide")
+immagini[0].classList.remove("hide");
 
 
 
 //azione bottoni
 btnUp.addEventListener("click", function () {
   console.log("hai cliccato il tasto UP")
+
+
 })
 
 

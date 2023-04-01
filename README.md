@@ -48,5 +48,19 @@ Non lasciamoci spaventare dalla complessità apparente dell’esercizio, ma anal
 
 1. Creo il markup statico inserend nell'HTML il container e al suo interno un’immagine grande al centro;
 2. Rimuoviamo tutto il markup statico e inserisco tutte le immagini dinamicamente servendomi dell’array fornito e un semplice ciclo for che concatena un template literal.
+for (let i = 0; i < images.length; i++) {
+  // con la const image andiamo a dire che equivale all'indice dellarray images
+  const image = images[i];
+  // console.log(image);
+  slider.innerHTML += `
+  <img class="hide" src="${image}">
+  `
+}
 (Tutte le immagini saranno nascoste, tranne la prima, che avrà una classe specifica che la renderà visibile. Al termine di questa fase ci ritroveremo con lo stesso slider stilato nella milestone 1, ma costruito dinamicamente attraverso JavaScript.)
+Per prendere tutte le immagini:
+`const immagini = document.getElementsByClassName("hide");`
+Per prendere il primo elemento di questo array:
+`immagini[0].classList.remove("hide");`
+
+2.1 
 3. Al click dell’utente sulle frecce, il programma cambierà l’immagine attiva, che quindi verrà visualizzata al posto della precedente.
