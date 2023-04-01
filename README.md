@@ -67,5 +67,6 @@ Per prendere il primo elemento di questo array:
 
 `immagini[0].classList.remove("hide");`
 
-2.1 
-3. Al click dell’utente sulle frecce, il programma cambierà l’immagine attiva, che quindi verrà visualizzata al posto della precedente.
+3. creo un contatore che ad ogni click si incrementa cambiando l'indice dell'immagine;
+ 
+4. Al click dell’utente sulle frecce, il programma cambierà l’immagine attiva, che quindi verrà visualizzata al posto della precedente.
