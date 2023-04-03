@@ -7,6 +7,7 @@ const btnDown = document.getElementById("down");
 
 //CONTATORE
 let contatore = 0;
+console.log("contatore", contatore);
 
 
 
@@ -28,18 +29,21 @@ const images = [
 for (let i = 0; i < images.length; i++) {
   // con la const image andiamo a dire che equivale all'indice dellarray images
   const image = images[i];
-  // console.log(image);
   slider.innerHTML += `
-  <img class="hide" src="${image}">
+  <img class="img hide" src="${image}">
   `
 }
 
 //PRENDO TUTTE LE IMMAGINI DALL'HTML APPENA CREATE E INSERITE
 //getElementsByClassName mi restituisce HTMLCollection che è un array con tutti gli elementi aventi la classe specificata
-const immagini = document.getElementsByClassName("hide");
-
+const immagini = document.getElementsByClassName("img");
+console.log("array iniziale", immagini)
 //prendo il primo elemento di questo array e gli tolgo la classe "hide"
 immagini[contatore].classList.remove("hide");
+
+
+//al pulsante indietro aggiungo la classe "hide" per non visualizzarlo
+btnUp.classList.add("hide");
 
 
 
@@ -49,13 +53,34 @@ btnDown.addEventListener("click", function () {
   console.log("hai cliccato il tasto DOWN ");
   immagini[contatore].classList.add("hide");
   contatore++;
-  console.log(contatore)
-  // immagini[contatore].classList.remove("hide");
+  console.log("contatore", contatore);
+  immagini[contatore].classList.remove("hide");
+  btnUp.classList.remove("hide");
+
+  if(contatore === images.length - 1){
+    btnDown.classList.add("hide")
+  }
+
+
 
 })
 
 
 btnUp.addEventListener("click", function () {
   console.log("hai cliccato il tasto UP")
+  immagini[contatore].classList.add("hide");
+  contatore--;
+  console.log("contatore", contatore);
+  immagini[contatore].classList.remove("hide");
+
+  if(contatore === 0){
+    btnUp.classList.add("hide")
+  }
+
+  if(contatore < images.length - 1){
+    btnDown.classList.remove("hide")
+  }
+
 })
+
 
